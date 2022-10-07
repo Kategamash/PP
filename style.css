@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Roboto:wght@300&display=swap");
+
+/* обнуляю все стили и отступы которые есть заранее */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: normal;
+  font-size: 16px;
+  overflow-x: hidden;
+  font-family: "Cinzel";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+/* ставлю внутренние границы контейнера*/
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 30px;
+  /* overflow-x: hidden; */
+}
+
+/* отступы сверху для меню */
+.header {
+  padding: 5px 0;
+}
+
+.navi {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* автоматическое распределеин объектов меню по ширине */
+.navi {
+  margin: auto;
+}
+
+/* выравнивание по центру */
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+/* убираю точки у списка и подчеркивания */
+.navi {
+  list-style: none;
+}
+
+/* настройки надписей link*/
+.navi_link {
+  font-size: 21px;
+  line-height: 10px;
+  color: #132646;
+  text-decoration: none;
+  margin: 0 17px;
+}
+
+/* настройка активной надписи */
+.navi_link--active {
+  color: #030c1c;
+  font-weight: 600;
+}
+
+/* настройка кнопок */
+.btn_login,
+.btn_register {
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 25px;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  min-width: 132px;
+  padding: 12px 36px;
+  border: 1.5px solid #132646;
+  transition: 0.6s ease;
+}
+
+/* настройка кнопки login */
+.btn_login {
+  background-color: #ffffff;
+  color: #132646;
+}
+/* настройка кнопки reg */
+.btn_register {
+  background-color: #132646;
+  color: #ffffff;
+}
+
+/* добавление отступа между кнопками и пункатами меню */
+.btn_login {
+  margin-right: 10px;
+}
+
+/* добавление анимации кнопки при наведении */
+.btn_login:hover {
+  background-color: #d2def2;
+  translate: 0 -3px;
+}
+.btn_register:hover {
+  background-color: #244b90;
+  translate: 0 -3px;
+}
+
+/* добавление анимации при наведение на пункт меню РАЗОБРАТЬСЯ!!!*/
+.navi_link {
+  position: relative;
+}
+
+.navi_link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  background: none repeat scroll 0 0 transparent;
+  height: 1px;
+  width: 0;
+  background: #132646;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.navi_link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.navi_link:hover {
+  color: #000000;
+}
+
+/* ПЕРВЫЙ БЛОК */
+.section_first {
+  background-color: #132646;
+}
+
+.container_first_pos {
+  display: flex;
+}
+
+.words {
+  display: inline;
+}
+/* редакт основных слов */
+.page_title {
+  padding-top: 18%;
+  font-size: 50px;
+  color: #ffffff;
+}
+
+.under_title {
+  font-size: 18px;
+  color: #b8d2ff;
+  margin-top: 5px;
+}
+/* редактирование бизнесмена */
+.image_businessman {
+  padding-top: 20px;
+  margin-left: auto;
+  padding-right: 20px;
+  translate: 0 6px;
+}
+/* редакт кнопка поиска старапов */
+.btn_search_main {
+  margin-top: 10%;
+}
+
+.btn_search {
+  margin-top: 10%;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 25px;
+  text-align: center;
+  padding: 12px 36px;
+  font-size: 18px;
+  border: 1px solid #132646;
+  transition: 0.6s ease;
+  color: #132646;
+  background-color: #ffffff;
+}
+
+.btn_search:hover {
+  background-color: #d2def2;
+}
+
+/* ВТОРОЙ БЛОК */
+.section_second {
+  background-color: #e4eeff;
+}
+
+.words_main {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* колонки текста серч, инвест, ерн */
+.textcols {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 30px;
+}
+.textcols-item {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  height: 30%;
+  background: #cddfff;
+  text-align: center;
+  border-radius: 20px;
+  padding: 50px 15px;
+  font-size: large;
+  border: 2px solid #132646;
+  max-height: 420px;
+  transition: 0.5s ease;
+}
+
+.textcols-item:hover {
+  translate: 0 -4px;
+}
+
+.textcols-item + .textcols-item {
+  margin-left: 5%;
+}
+
+.textcols-item b {
+  font-size: 30px;
+  padding-bottom: 15px;
+}
